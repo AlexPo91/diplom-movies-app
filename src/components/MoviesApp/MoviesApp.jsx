@@ -3,7 +3,7 @@ import { SEARCH_OPTIONS } from '../../constants/option';
 import Header from './Header';
 import ShowMovies from './ShowMovies';
 import SortBy from './SortBy';
-import FetchMovies from './FetchMovies';
+import fetchMovies from './helper';
 
 export default function MoviesApp() {
   const [value, setValue] = useState('');
@@ -20,7 +20,7 @@ export default function MoviesApp() {
   };
   const moviesData = async (event) => {
     event.preventDefault();
-    const { data } = await FetchMovies(value, option);
+    const { data } = await fetchMovies(value, option);
     setMovie(data);
   };
   const btnSortRating = () => {

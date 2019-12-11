@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 
-export default function ModalInfo({ filmPreview, setIsModalOpen }) {
-  return (
+export default function ModalInfo({ filmPreview, setIsModalOpen, isModalOpen }) {
+  return isModalOpen && (
     <div
       className={styles.film_preview_wrapper}
       onClick={(event) => {
@@ -35,4 +35,5 @@ $
 }
 ModalInfo.propTypes = {
   setIsModalOpen: PropTypes.func.isRequired,
+  isModalOpen: PropTypes.bool.isRequired,
 };

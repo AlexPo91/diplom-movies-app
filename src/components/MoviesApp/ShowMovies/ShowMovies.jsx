@@ -34,9 +34,7 @@ export default function ShowMovies({
           </div>
         </div>
       ))}
-      {isModalOpen && (
-        <ModalInfo filmPreview={filmPreview} setIsModalOpen={setIsModalOpen} />
-      )}
+      <ModalInfo isModalOpen={isModalOpen} filmPreview={filmPreview} setIsModalOpen={setIsModalOpen} />
     </div>
   );
 }
