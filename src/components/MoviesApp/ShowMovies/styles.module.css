@@ -13,6 +13,7 @@
 .film img {
     width: 100%;
   }
+  
   .film_years {
       padding: 5px;
       border: 1px solid grey;
@@ -27,4 +28,9 @@
   .film_genres {
     color: grey;
     font-size: 1.25rem;
+  }
+  .film_description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
   }
